@@ -7,7 +7,7 @@ export default class Pagination extends LightningElement {
     //Variável que dita o nr de records por página
     @api recordSize = 2
 
-    totalPage = 0
+    totalPage = 0 
     currentPage = 1
 
     get records(){

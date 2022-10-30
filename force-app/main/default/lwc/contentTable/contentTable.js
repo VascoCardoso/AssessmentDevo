@@ -8,11 +8,8 @@ export default class ContentTable extends LightningElement {
     
     @api recordId
 
-    totalRecords
-    displayRecords
-
-    pageSize = 3
-    pageNumber = 0
+    totalRecords = []
+    displayRecords = []
 
     //Ligação à função apex 'getRecords'
     @wire(getRecords, { recordId: '$recordId' })

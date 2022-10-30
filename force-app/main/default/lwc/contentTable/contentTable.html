@@ -1,5 +1,6 @@
 <template>
-    <lightning-card title="Show Related Records" icon-name="custom:custom63">
+    <div class="slds-size_medium">
+    <lightning-card title="Show Related Records" icon-name="action:new_note">
         <div class="slds-var-m-around_medium">
             <template if:true={displayRecords}>
                 <template for:each={displayRecords} for:item="record">
@@ -7,9 +8,10 @@
                 </template>
             </template>
             <div slot="footer" class="slds-var-m-vertical_medium">
-                <c-pagination records={totalRecords} onupdate={updateHandler}></c-pagination>
+                <c-pagination records={totalRecords} onupdate={updateRecHandler}></c-pagination>
             </div>
         </div>
     </lightning-card>
+</div>
 </template>
 

@@ -1,17 +1,15 @@
 <template>
-    <div class="slds-size_small">
-        <lightning-card title="Show Related Records" icon-name="custom:custom63">
-            <div class="slds-var-m-around_medium">
-                <template if:true={displayRecords}>
-                    <template for:each={displayRecords} for:item="record">
-                        <p key={record.Id}>{record.Name}</p>
-                    </template>
+    <lightning-card title="Show Related Records" icon-name="custom:custom63">
+        <div class="slds-var-m-around_medium">
+            <template if:true={displayRecords}>
+                <template for:each={displayRecords} for:item="record">
+                    <p key={record.Id}>{record.Name}</p>
                 </template>
-                <div slot="footer" class="slds-var-m-vertical_medium">
-                    <c-pagination records={totalRecords} onupdate={updateHandler}></c-pagination>
-                </div>
+            </template>
+            <div slot="footer" class="slds-var-m-vertical_medium">
+                <c-pagination records={totalRecords} onupdate={updateHandler}></c-pagination>
             </div>
-        </lightning-card>
-    </div>
+        </div>
+    </lightning-card>
 </template>
 
